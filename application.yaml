@@ -1,0 +1,11 @@
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    # Whether the Eureka client should register itself with Eureka Server
+    register-with-eureka: true
+    # Whether the Eureka client should fetch registry information from Eureka Server
+    fetch-registry: true
+    # List of Eureka server service URLs for registration and fetching registry information
+    service-url:
+      defaultZone: ${EUREKA_SERVER_ADDRESS:http://localhost:8761/eureka/}
